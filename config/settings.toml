@@ -1,0 +1,24 @@
+# Set Production or Development mode with T/F
+ProductionMode = false
+
+[app]
+# Set Host Port
+host = "localhost"
+port = "8080"
+ErrorLog = "log/error.log"
+RequestLog = "log/request.log"
+StaticPath = ""
+
+[postgres] #CockroachDB Cluster
+address = "0.0.0.0:26250" #Load Balancer Endpoint
+user = "app"
+password = ""
+database = ""
+cert = "/config/client.app.crt"
+key = "/config/client.app.key"
+
+[s3]
+endpoint = "nyc3.digitaloceanspaces.com"
+accessKey = ""
+secretKey = ""
+bucket = ""
